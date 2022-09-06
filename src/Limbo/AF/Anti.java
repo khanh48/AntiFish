@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Queue;
+import java.util.UUID;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -18,7 +19,7 @@ import Limbo.Message.Message;
 
 public class Anti implements Listener{
 	Main main;
-	static HashMap<Player, Integer> fisher;
+	static HashMap<UUID, Integer> fisher;
 	Location oldP, newP;
 	static int rad, fish;
 	HashMap<String, Boolean> visited;
@@ -29,15 +30,15 @@ public class Anti implements Listener{
 	
 	public Anti() {
 		main = Main.getIntance();
-		fisher = new HashMap<Player, Integer>();
+		fisher = new HashMap<UUID, Integer>();
 		visited = new HashMap<>();
 	}
 	
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
-		fisher.put(e.getPlayer(), 0);
+		fisher.put(e.getPlayer().getUniqueId(), 0);
 	}
-	
+
 	@EventHandler
 	public void onFishing(PlayerFishEvent e) {
 		Player p = e.getPlayer();
@@ -51,27 +52,28 @@ public class Anti implements Listener{
 	}
 	
 	public void antiMod(PlayerFishEvent e, Player p) {
+		UUID id = p.getUniqueId();
 		if(!main.getConfig().getBoolean("anti-mod")) return;
 		if(e.getState().equals(State.CAUGHT_FISH)) {
 			rad = main.getConfig().getInt("radius");
 			fish = main.getConfig().getInt("fish");
 			
-			newP = e.getHook().getLocation();
-			if(!fisher.containsKey(p)) return;
-			int tmp = fisher.get(p);
+			newP = e.getHook().getLocation().clone();
+			if(!fisher.containsKey(id)) return;
+			int tmp = fisher.get(id);
 			if(tmp == 0) {
-				fisher.put(p, tmp + 1);
-				oldP = newP;
+				fisher.put(id, tmp + 1);
+				oldP = newP.clone();
 			}
 			else if(tmp > 0 && tmp <= fish) {
-				fisher.put(p, tmp + 1);
+				fisher.put(id, tmp + 1);
 				if(!inside(oldP, newP, rad)) {
-					fisher.put(p, 0);
+					fisher.put(id, 0);
 				}
 			}
 			else {
 				if(!inside(oldP, newP, rad)) {
-					fisher.put(p, 0);
+					fisher.put(id, 0);
 					return;
 				}
 				e.setCancelled(true);

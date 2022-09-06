@@ -8,7 +8,6 @@ import Limbo.Main;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -29,6 +28,7 @@ public class UpdateChecker {
     	try {
     		HttpsURLConnection url = (HttpsURLConnection) new URL("https://api.spigotmc.org/legacy/update.php?resource=" + this.resourceId).openConnection();
     		url.setUseCaches(false);
+    		url.setReadTimeout(5000);
     		InputStream in = url.getInputStream();
     		Scanner scanner = new Scanner(in);
     		if(scanner.hasNext()) {
@@ -53,6 +53,7 @@ public class UpdateChecker {
 					{
 						Main.send(Bukkit.getConsoleSender(), "&6There is a new update available.");
 						Main.send(Bukkit.getConsoleSender(), "&6Dowload it here: https://www.spigotmc.org/resources/advanced-anti-auto-fishing.104939");
+						
 					}
 				});
 			}

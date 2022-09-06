@@ -3,6 +3,7 @@ package Limbo;
 import java.util.concurrent.Callable;
 
 import Limbo.Metrics.Metrics;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -84,6 +85,7 @@ public class Main extends JavaPlugin{
 	public static String format(String cnt) {
 		return ChatColor.translateAlternateColorCodes('&', "&l&3[AntiAutoFish] " + cnt);
 	}
+	
 	public static void send(CommandSender to, Message msg) {
 		send(to, msg, "Limbo48");
 	}
