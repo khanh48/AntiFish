@@ -15,8 +15,7 @@ public class OnDisable implements Listener{
 	public void playerCmd(PlayerCommandPreprocessEvent e) {
 		if(e.getMessage().equalsIgnoreCase("/stop") && e.getPlayer().hasPermission("minecraft.command.stop")) {
 			e.setCancelled(true);
-			Main.getIntance().saveOnDisable();
-			Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
+			doDisable();
 		}
 	}
 	
@@ -24,8 +23,7 @@ public class OnDisable implements Listener{
 	public void consoleCmd(ServerCommandEvent e) {
 		if(e.getCommand().equalsIgnoreCase("stop")) {
 			e.setCancelled(true);
-			Main.getIntance().saveOnDisable();
-			Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
+			doDisable();
 		}
 	}
 	
@@ -33,8 +31,12 @@ public class OnDisable implements Listener{
 	public void remoteCmd(RemoteServerCommandEvent e) {
 		if(e.getCommand().equalsIgnoreCase("stop")) {
 			e.setCancelled(true);
-			Main.getIntance().saveOnDisable();
-			Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
+			doDisable();
 		}
+	}
+	
+	void doDisable() {
+		Main.getIntance().saveOnDisable();
+		Main.getIntance().getServer().shutdown();
 	}
 }

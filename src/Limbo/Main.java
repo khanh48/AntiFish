@@ -27,15 +27,14 @@ public class Main extends JavaPlugin{
 
 	@Override
 	public void onEnable() {
-		int updateID = 104939;
 		intance = this;
-		this.message = new Config("message");
 		this.saveDefaultConfig();
+		this.message = new Config("message");
 		this.anti = new Anti();
 		this.spam = new SpamFish();
 		this.events = new RegEvents();
 		this.cm = new RegCommand();
-		updateChecker = new UpdateChecker(updateID);
+		updateChecker = new UpdateChecker(104939);
 		Metrics metrics = new Metrics(this, 16307);
 		metrics.addCustomChart(new Metrics.SimplePie("anti_mod", new Callable<String>() {
 			@Override
@@ -74,16 +73,12 @@ public class Main extends JavaPlugin{
 	
 	public static void send(CommandSender to, Message msg, Object val) {
 		String tmp = "";
-		if(msg.label.contains("%radius%")) {
-			tmp = msg.label.replace("%radius%", String.valueOf(val));
-		}else {
-			tmp = msg.label;
-		}
+		tmp = msg.label.replace("%radius%", String.valueOf(val));
 		send(to, tmp);
 	}
 	
 	public static String format(String cnt) {
-		return ChatColor.translateAlternateColorCodes('&', "&l&3[AntiAutoFish] " + cnt);
+		return ChatColor.translateAlternateColorCodes('&', "&l&3[AntiAutoFish]&r " + cnt);
 	}
 	
 	public static void send(CommandSender to, Message msg) {

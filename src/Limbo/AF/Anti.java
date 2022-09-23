@@ -53,10 +53,10 @@ public class Anti implements Listener{
 	
 	public void antiMod(PlayerFishEvent e, Player p) {
 		UUID id = p.getUniqueId();
-		if(!main.getConfig().getBoolean("anti-mod")) return;
-		if(e.getState().equals(State.CAUGHT_FISH)) {
 			rad = main.getConfig().getInt("radius");
 			fish = main.getConfig().getInt("fish");
+		if(!main.getConfig().getBoolean("anti-mod")) return;
+		if(e.getState().equals(State.CAUGHT_FISH)) {
 			
 			newP = e.getHook().getLocation().clone();
 			if(!fisher.containsKey(id)) return;
@@ -139,14 +139,13 @@ public class Anti implements Listener{
 		return true;
 	}
 	
-	public static Double distance(Location loc1, Location loc2) {
+	public static double distance(Location loc1, Location loc2) {
 		double x = loc1.getX() - loc2.getX();
-		double y = loc1.getY() - loc2.getY();
 		double z = loc1.getZ() - loc2.getZ();
-		return Math.sqrt(x*x + y*y + z*z);
+		return Math.sqrt(x*x + z*z);
 	}
 	
-	public Boolean inside(Location loc1, Location loc2, int radius) {
-		return loc1.distance(loc2) <= radius? true : false;
+	public boolean inside(Location loc1, Location loc2, int radius) {
+		return distance(loc1, loc2) <= radius? true : false;
 	}
 }

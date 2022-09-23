@@ -1,6 +1,7 @@
 package Limbo.Updater;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import Limbo.Main;
@@ -51,13 +52,17 @@ public class UpdateChecker {
 					}
 					else
 					{
+						for (Player player : plugin.getServer().getOnlinePlayers())
+							if(player.hasPermission("af.admin")) {
+								Main.send(player, "&6&lThere is a new update available.");
+								Main.send(player, "&6Dowload it here: https://www.spigotmc.org/resources/advanced-anti-auto-fishing.104939");
+							}
 						Main.send(Bukkit.getConsoleSender(), "&6There is a new update available.");
 						Main.send(Bukkit.getConsoleSender(), "&6Dowload it here: https://www.spigotmc.org/resources/advanced-anti-auto-fishing.104939");
-						
 					}
 				});
 			}
 		};
-		checker.runTaskTimerAsynchronously(plugin, 100, 12000);
+		checker.runTaskTimerAsynchronously(plugin, 100, 288000);
     }
 }

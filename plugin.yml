@@ -1,12 +1,13 @@
 name: AntiAutoFish
 main: Limbo.Main
 authors: [Limbo48]
-version: 1.03
+version: 1.05
 api-version: 1.18
 
 commands:
   afreload:
     description: Reload config
+    aliases: [arl, afrl]
 
 permissions:
   af.*:
