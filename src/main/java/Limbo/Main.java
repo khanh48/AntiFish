@@ -55,6 +55,11 @@ public class Main extends JavaPlugin{
 			}
 		}));
 	}
+	@Override
+	public void onDisable() {
+		this.saveOnDisable();
+		super.onDisable();
+	}
 	
 	public static Main getIntance() {
 		return intance;
@@ -71,9 +76,9 @@ public class Main extends JavaPlugin{
 		to.sendMessage(format(cnt));
 	}
 	
-	public static void send(CommandSender to, Message msg, Object val) {
+	public static void send(CommandSender to, String msg, Object val) {
 		String tmp = "";
-		tmp = msg.label.replace("%radius%", String.valueOf(val));
+		tmp = msg.replace("%radius%", String.valueOf(val));
 		send(to, tmp);
 	}
 	
@@ -81,19 +86,16 @@ public class Main extends JavaPlugin{
 		return ChatColor.translateAlternateColorCodes('&', "&l&3[AntiAutoFish]&r " + cnt);
 	}
 	
-	public static void send(CommandSender to, Message msg) {
-		send(to, msg, "Limbo48");
-	}
-	
 	public void reload() {
 		reloadConfig();
 		getMessageConfig().reloadConfig();
+		Message.reload();
 	}
 	
 	public void saveOnDisable() {
-		send(getServer().getConsoleSender(), "Goodbye...");
 		saveConfig();
 		UpdateChecker.checker.cancel();
+		send(getServer().getConsoleSender(), "Goodbye...");
 	}
 	
 	public Config getMessageConfig(){

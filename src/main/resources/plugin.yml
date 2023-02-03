@@ -1,0 +1,23 @@
+name: AntiAutoFish
+main: Limbo.Main
+author: Limbo48
+version: 1.06
+api-version: 1.15
+
+commands:
+  afreload:
+    description: Reload config
+    aliases: [arl, afrl]
+
+permissions:
+  af.*:
+    description: For all command
+    default: false
+    children:
+      af.admin: true
+  af.admin:
+    default: false
+    children:
+      af.bypass: true
+  af.bypass:
+    default: false

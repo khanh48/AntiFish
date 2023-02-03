@@ -1,0 +1,23 @@
+#enable?
+anti-mod: true
+anti-farm: true
+anti-spam-fish: true
+
+#Anti spam
+#spam fish (right click fishing rod)
+#kick player if spam fishing below 1 second for each time in 10 times
+time-spam: 1
+spam-check: 10
+
+#Anti Mod auto fishing
+#area, suggest 2 or 3
+radius: 2   
+#limit fish can fishing per area
+fish: 15
+
+#Anti farm
+check-list:
+- note_block
+- trapdoor
+- hopper
+- pressure_plate

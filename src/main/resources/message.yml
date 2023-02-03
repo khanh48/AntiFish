@@ -1,0 +1,7 @@
+# %radius% : radius (config.yml), only use in mod_msg
+message:
+  mod_msg: "&6You have fished all the fish here. Move over the position %radius% blocks away to fish!"
+  farm_msg: "&6You can't use the fishing farm!"
+  reload_msg: "&cReloaded!"
+  hasnt_perm: "&cYou do not have permisson to perform this command"
+  kick_msg: "&cYou have been kicked for spam fishing many times"

@@ -12,6 +12,5 @@ public class RegEvents {
 		
 		p.registerEvents(m.getAnti(), m);
 		p.registerEvents(m.getSpam(), m);
-		p.registerEvents(new OnDisable(), m);
 	}
 }

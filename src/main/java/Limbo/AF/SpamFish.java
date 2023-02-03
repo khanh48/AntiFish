@@ -43,7 +43,7 @@ public class SpamFish implements Listener{
 				count++;
 			}
 			if((total/count) < (sec * main.getConfig().getDouble("time-spam"))) {
-				p.kickPlayer(Main.format(Message.KICK_MSG.label));
+				p.kickPlayer(Main.format(Message.KICK_MSG));
 			}
 			spam.get(p).clear();
 		}
