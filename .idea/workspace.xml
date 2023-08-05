@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8f98d24-1f80-42f7-ac22-b0d60d5494af" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/AF/Anti.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/AF/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/AF/SpamFish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Commands/RegCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/CustomConfig/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Events/RegEvents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Message/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$AdvancedBarChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$AdvancedPie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$CustomChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$DrilldownPie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$JsonObjectBuilder$JsonObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$JsonObjectBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$MetricsBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$MultiLineChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$SimpleBarChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$SimplePie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics$SingleLineChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Metrics/Metrics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Updater/UpdateChecker$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Limbo/Updater/UpdateChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/message.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SyfKmLN16fo1k5Ks2W1rD6WSOU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ADMIN/eclipse-workspace/SS"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8f98d24-1f80-42f7-ac22-b0d60d5494af" name="Changes" comment="" />
+      <created>1690123679835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690123679835</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

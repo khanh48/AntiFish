@@ -9,7 +9,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import Limbo.AF.Anti;
-import Limbo.AF.SpamFish;
 import Limbo.Commands.RegCommand;
 import Limbo.CustomConfig.Config;
 import Limbo.Events.RegEvents;
@@ -18,8 +17,6 @@ import Limbo.Updater.UpdateChecker;
 
 public class Main extends JavaPlugin{
 	static Main intance;
-	Anti anti;
-	SpamFish spam;
 	RegEvents events;
 	RegCommand cm;
 	UpdateChecker updateChecker;
@@ -30,8 +27,6 @@ public class Main extends JavaPlugin{
 		intance = this;
 		this.saveDefaultConfig();
 		this.message = new Config("message");
-		this.anti = new Anti();
-		this.spam = new SpamFish();
 		this.events = new RegEvents();
 		this.cm = new RegCommand();
 		updateChecker = new UpdateChecker(104939);
@@ -65,13 +60,6 @@ public class Main extends JavaPlugin{
 		return intance;
 	}
 	
-	public Anti getAnti() {
-		return this.anti;
-	}
-	public SpamFish getSpam() {
-		return this.spam;
-	}
-	
 	public static void send(CommandSender to, String cnt) {
 		to.sendMessage(format(cnt));
 	}
@@ -90,6 +78,7 @@ public class Main extends JavaPlugin{
 		reloadConfig();
 		getMessageConfig().reloadConfig();
 		Message.reload();
+		Anti.reload();
 	}
 	
 	public void saveOnDisable() {

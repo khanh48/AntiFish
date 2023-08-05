@@ -10,10 +10,10 @@ time-spam: 1
 spam-check: 10
 
 #Anti Mod auto fishing
-#area, suggest 2 or 3
-radius: 2   
+#area
+radius: 3
 #limit fish can fishing per area
-fish: 15
+fish: 10
 
 #Anti farm
 check-list:

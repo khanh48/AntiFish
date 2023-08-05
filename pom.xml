@@ -2,9 +2,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Limbo</groupId>
 	<artifactId>AntiAutoFish</artifactId>
-	<version>1.06</version>
+	<version>1.07</version>
 	<name>AntiAutoFish</name>
-
+	
+	
+	<build>
+   		<finalName>${project.artifactId}</finalName>
+	</build>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
